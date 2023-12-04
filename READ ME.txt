@@ -1,0 +1,72 @@
+Heart Disease Research Part II
+In this project, you’ll investigate some data from a sample patients who were evaluated for heart disease at the Cleveland Clinic Foundation. The data was downloaded from the UCI Machine Learning Repository and then cleaned for analysis. The principal investigators responsible for data collection were:
+
+Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.
+University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.
+University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.
+V.A. Medical Center, Long Beach and Cleveland Clinic Foundation: Robert Detrano, M.D., Ph.D.
+
+Inspect the Data
+
+The data has been saved as a dataframe named heart. It contains the following variables:
+
+age: age in years
+sex: sex assigned at birth; 'male' or 'female'
+trestbps: resting blood pressure in mm Hg
+chol: serum cholesterol in mg/dl
+cp: chest pain type ('typical angina', 'atypical angina', 'non-anginal pain', or 'asymptomatic')
+exang: whether the patient experiences exercise-induced angina (1: yes; 0: no)
+fbs: whether the patient’s fasting blood sugar is >120 mg/dl (1: yes; 0: no)
+thalach: maximum heart rate achieved in exercise test
+heart_disease: whether the patient is found to have heart disease ('presence': diagnosed with heart disease; 'absence': no heart disease)
+
+
+Predictors of Heart Disease
+Each of the patients in this dataset underwent an exercise test, during which their heart rate was monitored. For each patient, thalach gives us the highest heart rate that the patient achieved during this test.
+
+Is thalach associated with whether or not a patient will ultimately be diagnosed with heart disease? Do you think there is a relationship between these variables?
+
+Calculate and print the difference in mean thalach for patients diagnosed with heart disease compared to patients without heart disease. Then do the same for the median difference.
+
+We’d like to find out if the average thalach of a heart disease patient is significantly different from the average thalach for a person without heart disease.
+
+Import the statistical test that we would use to test the following null and alternative hypotheses:
+
+Null: The average thalach for a person with heart disease is equal to the average thalach for a person without heart disease.
+Alternative: The average thalach for a person with heart disease is NOT equal to the average thalach for a person without heart disease.
+
+Run the hypothesis test from task using a significance threshold of 0.05, is there a significant difference in average thalach for people with heart disease compared to people with no heart disease?
+
+
+Using the same process, investigate at least one other quantitative variable. Options include age, trestbps (resting blood pressure), and chol (cholesterol). Are any of these variables also significantly associated with heart disease?
+
+
+Chest Pain and Max Heart Rate
+Next, let’s investigate the relationship between thalach (maximum heart rate achieved during exercise) and the type of heart pain a person experiences. 
+
+Are there any chest pain types for which average thalach is significantly higher or lower (compared to other chest pain types)?
+
+
+To investigate this further, save the values of thalach for patients who experienced each type of chest pain as thalach_typical, thalach_asymptom, thalach_nonangin, and thalach_atypical, respectively.
+
+
+10.
+Run a single hypothesis test to address the following null and alternative hypotheses:
+
+Null: People with typical angina, non-anginal pain, atypical angina, and asymptomatic people all have the same average thalach.
+Alternative: People with typical angina, non-anginal pain, atypical angina, and asymptomatic people do not all have the same average thalach.
+Using a significance threshold of 0.05, is there at least one pair of chest pain categories for which people in those categories have significantly different thalach?
+
+Run another hypothesis test to determine which of those pairs are significantly different. Use an overall type I error rate of 0.05 for all six comparisons.
+
+Heart Disease and Chest Pain
+Finally, let’s investigate the relationship between the kind of chest pain a person experiences and whether or not they have heart disease. Create a contingency table of cp and heart_disease.
+
+Run a hypothesis test for the following null and alternative hypotheses:
+
+Null: There is NOT an association between chest pain type and whether or not someone is diagnosed with heart disease.
+Alternative: There is an association between chest pain type and whether or not someone is diagnosed with heart disease.
+Using a significance threshold of 0.05, is there a significant association between chest pain type and whether or not someone is diagnosed with heart disease?
+
+Further Exploration
+You’ve used a sample of data to understand how health related outcomes are associated with heart disease. Now that you’ve gotten your feet wet, there are a number of additional variables in this dataset that we haven’t looked at yet! If you want additional practice, use this space to continue your investigation. What other variables might be predictive of heart disease? Can you identify which hypothesis test to use for each variable?
